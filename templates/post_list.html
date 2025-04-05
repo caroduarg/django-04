@@ -1,0 +1,11 @@
+
+{% for post in posts %}
+
+    {{post.title}}
+
+{% empty %}
+    <h1>No posts available</h1>
+
+{% endfor %}
+
+<a href="{% url 'post-create' %}">Crear</a>
