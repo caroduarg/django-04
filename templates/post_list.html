@@ -1,4 +1,8 @@
 
+{% extends 'includes/navbar.html' %}
+
+{% block content %}
+
 {% for post in posts %}
 
     <a href="{% url 'post-detail' post.pk %}">{{post.title}}</a>
@@ -9,3 +13,5 @@
 {% endfor %}
 
 <a href="{% url 'post-create' %}">Crear</a>
+
+{% endblock %}
