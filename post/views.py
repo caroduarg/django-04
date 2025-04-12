@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
 from .models import Post
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.urls import reverse_lazy
 
 # Create your views here.
@@ -16,3 +16,7 @@ class PostCreate(CreateView):
     model = Post
     fields = ['title', 'description', 'image', 'author']
     success_url = reverse_lazy('post-list')
+
+class PostDetail(DetailView):
+    template_name = 'post_detail.html'
+    model = Post

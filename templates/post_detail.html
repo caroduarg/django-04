@@ -1,0 +1,29 @@
+<div class="post-detail-container">
+    <h1 class="post-title">{{ post.title }}</h1>
+    
+    <div class="post-meta">
+        <span class="author">Autor: {{ post.author.username }}</span>
+        <span class="date">Creado: {{ post.created_at|date:"d M Y H:i" }}</span>
+        {% if post.updated_at != post.created_at %}
+            <span class="date">Actualizado: {{ post.updated_at|date:"d M Y H:i" }}</span>
+        {% endif %}
+    </div>
+    
+    {% if post.image %}
+    <div class="post-image">
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid">
+    </div>
+    {% endif %}
+    
+    <div class="post-description">
+        {{ post.description|linebreaks }}  <!-- El filtro linebreaks convierte saltos de línea en <br> -->
+    </div>
+    
+    <!-- Puedes agregar botones de edición/eliminación si el usuario es el autor -->
+    {% if user.is_authenticated and user == post.author %}
+    <div class="post-actions mt-4">
+        <a href="{% url 'post_edit' post.id %}" class="btn btn-primary">Editar</a>
+        <a href="{% url 'post_delete' post.id %}" class="btn btn-danger">Eliminar</a>
+    {% endif %}
+    </div>
+</div>
