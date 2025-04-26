@@ -6,6 +6,10 @@ from django.urls import reverse_lazy
 # Create your views here.
 
 class SignUpView (CreateView):
-    template_name = 'authentication/signup.html'
+    template_name = 'registration/signup.html'
     form_class = UserCreationForm
-    success_url = reverse_lazy('post_list')
+    success_url = reverse_lazy('post-list')
+
+#mostrar la pagina de inicio
+def home(request):
+    return render(request, 'registration/home.html')
