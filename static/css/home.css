@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    color: #333;
+    color: #388E3C;
     line-height: 1.6;
 }
 
@@ -20,7 +20,7 @@ header {
 }
 
 h1 {
-    color: #2c3e50;
+    color: #388E3C;
 }
 
 /* Formularios de autenticación */
@@ -42,23 +42,23 @@ h1 {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-.auth-form {
-    display: flex;
+.auth-forms {
+    display: block;
     flex-direction: column;
 }
 
-.auth-form p {
+.auth-forms p {
     margin-bottom: 15px;
 }
 
-.auth-form label {
+.auth-forms label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.auth-form input[type="text"],
-.auth-form input[type="password"] {
+.auth-forms input[type="text"],
+.auth-forms input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
@@ -69,7 +69,7 @@ h1 {
 /* Botones */
 .btn {
     display: inline-block;
-    background: #3498db;
+    background: #388E3C;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -81,7 +81,7 @@ h1 {
 }
 
 .btn:hover {
-    background: #2980b9;
+    background: #388E3C;
 }
 
 /* Mensajes y enlaces */
@@ -90,8 +90,13 @@ h1 {
     text-align: center;
 }
 
+.login-form {
+    margin-top: 20px;
+    text-align: center;
+}
+
 .auth-container a {
-    color: #3498db;
+    color: #388E3C;
     text-decoration: none;
 }
 

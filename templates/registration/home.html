@@ -5,24 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>Bienvenido</h1>
         </header>
-        
         <div class="auth-forms">
-            {% if user.is_authenticated %}
-                <div class="authenticated">
-                    <p>Hola, {{ user.username }}!</p>
-                    <form action="{% url 'logout' %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="btn">Cerrar sesión</button>
-                    </form>
-                </div>
-            {% else %}
                 <div class="login-form">
                     <h2>Iniciar sesión</h2>
                     <form method="post" action="{% url 'login' %}">
@@ -31,12 +21,10 @@
                         <button type="submit" class="btn">Iniciar sesión</button>
                     </form>
                 </div>
-                
                 <div class="signup-prompt">
                     <p>¿No tienes una cuenta?</p>
                     <a href="{% url 'signup' %}" class="btn">Regístrate aquí</a>
                 </div>
-            {% endif %}
         </div>
     </div>
 </body>

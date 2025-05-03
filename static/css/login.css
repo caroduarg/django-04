@@ -1,0 +1,100 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #388E3C;
+}
+
+/* Contenedor del formulario */
+form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    color: #388E3C;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Campos del formulario */
+form p {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #388E3C;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Botón de submit */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #388E3C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #388E3C;
+}
+
+/* Mensajes de error (si usas Django) */
+.errorlist {
+    color: #e74c3c;
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
